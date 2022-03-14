@@ -1,0 +1,2 @@
+# tgProjekt
+Fotó nézegető/szerkesztő
