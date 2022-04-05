@@ -4,11 +4,15 @@
 Egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
 Célunk az volt, hogy a Vision alkalmazás modern helyettesítőjét építsem fel. A Vision egyszerűsége csodálatra méltó.
 
-### Funkciók
-  * forgatás - a kép szögének megváltoztatása 90 180 270 360
-  * tükrözés - vizszintes és függőleges
-  * filterek - mint a legtöbb photo szerkesztő appban 
-  * fényerő - a kép világosítása és halványitása
+## Funkciók
+###  * Forgatás
+  - a kép szögének megváltoztatása 90 180 270 360
+###  * Tükrözés
+- vizszintes és függőleges
+###  * Filterek
+- mint a legtöbb photo szerkesztő appban 
+###  * Fényerő változtatása
+- a kép világosítása és halványitása
  
 ## Támogatott formátumok
    * .png 
