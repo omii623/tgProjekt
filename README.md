@@ -1,18 +1,25 @@
-# tgProjekt
+# PhoTo
 ## Fotó nézegető/szerkesztő
 
-Egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
-Célunk az volt, hogy a PhoTo alkalmazás modern helyettesítőjét építsem fel. A PhoTo egyszerűsége csodálatra méltó.
+A PhoTo egy egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
+Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építsünk fel. A PhoTo egyszerűsége csodálatra méltó.
 
 ## Funkciók
 * ###  Forgatás
-  - a kép szögének megváltoztatása 90 180 270 360
+  - Lehetőséget biztosít a program a kép szögének megváltoztatására, hogy számunkra kedvező módon táruljon elénk a kívánt fotó.
+  - Elérhető forgatási szögek: 
+    - 90°
+    - 180°
+    - 270°
+    - 360°
 * ###  Tükrözés
-  - vizszintes és függőleges
+  - Különböző tükrözési metódusokra is lehetőségünk nyílik, ezek pedig: 
+    -   vízszintes
+    -   függőleges
 * ###  Filterek
-  - Az alkalmazásban lehetőségünk van  
+  - A programban lehetőségünk van különféle szűrők közül választani. Ide sorolhatjuk például a fekete-fehér filtert.   
 * ###  Fényerő változtatása
-  - a kép világosítása és halványitása
+  - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
  
 ## Támogatott formátumok
    * .png 
