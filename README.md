@@ -2,16 +2,17 @@
 Fotó nézegető/szerkesztő
 
 Egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
-Célún az volt, hogy a <név?> alkalmazás modern helyettesítőjét építsem fel. A <név?> egyszerűsége csodálatra méltó.
+Célunk az, hogy a <név?> alkalmazás modern helyettesítőjét építsem fel. A <név?> egyszerűsége csodálatra méltó.
 
-Fuinkciók
-  1. forgátás - a kép szögének megváltoztatása 90 180 270 360
-  2. tükrözés - vizszintes és függőleges
+Funkciók
+  1. forgatás - a kép szögének megváltoztatása. Lehetséges mértékek: 90°, 180°, 270°, 360°
+  2. tükrözés - vízszintes és függőleges
   3. filterek - mint a legtöbb photo szerkesztő appban 
-  4. fényerő - a kép világosítása és halványitása
+  4. fényerő - a kép világosítása és halványítása
  
- Formátumk amit támogat .png .jpg
- 
- 
+ Formátumok, amiket a program támogat: *.png, *.jpg
  
  
+ A mappakezelés a következőképpen kerül megvalósításra:
+ Meg van adva egy statikus útvonal, amibe a felhasználó belerakhatja a kívánt képeket, amiket aztán a programban használni szeretne.
+ Ezen kiválasztott képeknek módosított vagy eredeti formáit tudja majd élvezni a programon belül.
