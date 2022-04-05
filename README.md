@@ -2,7 +2,7 @@
 ## Fotó nézegető/szerkesztő
 
 Egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
-Célunk az volt, hogy a <név?> alkalmazás modern helyettesítőjét építsem fel. A <név?> egyszerűsége csodálatra méltó.
+Célunk az volt, hogy a Vision alkalmazás modern helyettesítőjét építsem fel. A Vision egyszerűsége csodálatra méltó.
 
 ## Funkciók
   * forgátás - a kép szögének megváltoztatása 90 180 270 360
