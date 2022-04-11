@@ -20,6 +20,10 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
   - A programban lehetőségünk van különféle szűrők közül választani. Ide sorolhatjuk például a fekete-fehér filtert.   
 * ###  Fényerő változtatása
   - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
+* ###  Kép mentése
+  - A kép lementhtő támogatott formátumok bármelyikére és tetszőleges helyre le is lehet menteni azt.
+* ###  Kép megnyitása
+  - A kép megnyitásása a támogatott formátumokban képes. A megnyitást követően használhatók tetszőlegesen a funkciók.
  
 ## Támogatott formátumok
    * .png 
