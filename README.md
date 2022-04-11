@@ -31,3 +31,16 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
 
 
 A mappakezelés a következőképpen kerül megvalósításra: Meg van adva egy statikus útvonal, amibe a felhasználó belerakhatja a kívánt képeket, amiket aztán a programban használni szeretne. Ezen kiválasztott képeknek módosított vagy eredeti formáit tudja majd élvezni a programon belül.
+
+## Rendszerkövetelmények
+
+Java 17 verziója.
+
+* ### CPU 
+ - Intel® Core®2 Duo E6700 @ 2.6 GHz vagy jobb, AMD™ Athlon™64 X2 6000+ @ 3.0Ghz vagy jobb
+* ### RAM
+ - 2 GB
+* ### OS
+ - Windows® 7 vagy Windows® 8 vagy Windows® 10 vagy Windows® 11 vagy Linux...
+
+
