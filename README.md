@@ -39,14 +39,14 @@ A mappakezelés a következőképpen kerül megvalósításra: Meg van adva egy 
 ## Használat
 
 A program egy egyszerű és átlátható UI-al, azaz felhasználói felülettel rendelkezik. A Menü bal felülről nyitható le, amivel a főbb filekezelési funkciók válnak elérhetővé, beleértve:
-  * a megnyitást
-  * a mentést
-  * a mentés másként-et.
+  * A megnyitást
+  * A mentést
+  * A mentés másként-et.
   
  A transzformálási funkciók az adott kép körül fognak elhelyezkedni, a gyors elérés érdekében. Ezek legfőképpen bizonyos ikonokkal kerülnek megvalósításra. Ezek közé tartoznak:
-  * forgatás
-  * tükrözés
-  * filterek
+  * Forgatás
+  * Tükrözés
+  * Filterek
   
 A kép módosítása után lehetőség van elvetni a változtatásokat, ebben az esetben az eredeti file kerül megtartásra, nem íródik felül.
 Ez biztosítja, hogy csak azon változtatások mehessenek végbe, amelyek tényleg kívánatosak a felhasználó által.
