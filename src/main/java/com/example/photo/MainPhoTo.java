@@ -18,6 +18,7 @@ public class MainPhoTo extends Application {
         //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
         //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
         //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
+        //MASIK KOMMENT
     }
 
     public static void main(String[] args) {
