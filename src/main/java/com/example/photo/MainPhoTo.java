@@ -16,6 +16,8 @@ public class MainPhoTo extends Application {
         stage.setScene(scene);
         stage.show();
         //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
+        //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
+        //KOMMENTET TESZTELEK ITT MOST ÉN AMÚGY
     }
 
     public static void main(String[] args) {
