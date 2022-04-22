@@ -1,4 +1,4 @@
-package com.example.photo;
+package hu.projekt.photo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

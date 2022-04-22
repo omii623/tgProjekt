@@ -3,6 +3,6 @@ module com.example.photo {
     requires javafx.fxml;
 
 
-    opens com.example.photo to javafx.fxml;
-    exports com.example.photo;
+    opens hu.projekt.photo to javafx.fxml;
+    exports hu.projekt.photo;
 }
