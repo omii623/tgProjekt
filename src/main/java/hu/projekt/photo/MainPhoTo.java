@@ -11,9 +11,8 @@ import java.io.IOException;
 public class MainPhoTo extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        //FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("hello-view.fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 1400, 800);
 
         stage.getIcons().add(new Image("https://i.ibb.co/rMTfSQN/icon.png"));
         stage.setTitle("PhoTo");
