@@ -15,6 +15,7 @@ import java.io.FileNotFoundException;
 public class Controller {
 
     FileKezel fileKezel;
+    KepMegjelenit kepMegjelenit = new KepMegjelenit();
     @FXML
     ImageView imageView;
 
@@ -23,12 +24,9 @@ public class Controller {
         MenuItem mi = (MenuItem) event.getSource();
         System.out.println(mi.getId());
         fileKezel = new FileKezel(mi.getId());
-        test();
+
+
+        imageView.setImage(kepMegjelenit.kirajzol(fileKezel.getFileImage()));
     }
 
-    public void test() throws FileNotFoundException {
-        FileInputStream inputstream = new FileInputStream(fileKezel.getFileImage());
-        Image image = new Image(inputstream);
-        imageView.setImage(image);
-    }
 }

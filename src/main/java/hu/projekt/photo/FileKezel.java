@@ -55,11 +55,15 @@ public class FileKezel {
                 fileSave();
                 break;
             case "saveAs":
-                fileOpen();
+                fileSaveAs();
                 break;
             case "exit":
                 exit();
                 break;
         }
+    }
+
+    public FileKezel(){
+
     }
 }
