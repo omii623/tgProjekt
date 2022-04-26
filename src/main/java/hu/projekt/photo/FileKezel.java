@@ -17,22 +17,13 @@ import java.io.FileNotFoundException;
 public class FileKezel {
 
     private File fileImage;
-    @FXML
-    ImageView imageView;
+
 
     public File getFileImage() {
         return fileImage;
     }
 
-    @FXML
-    public void test() throws FileNotFoundException {
-        FileInputStream inputstream = new FileInputStream(fileImage);
-        Image image = new Image(inputstream);
-        imageView.setImage(image);
-    }
-
-    @FXML
-    private void fileOpen() throws FileNotFoundException {
+    public void fileOpen() throws FileNotFoundException {
         System.out.println("file open");
 
         FileChooser fc = new FileChooser();
@@ -41,24 +32,34 @@ public class FileKezel {
         fileImage = fc.showOpenDialog(null);
 
         System.out.println("Path: "+fileImage);
-        test();
     }
 
-    @FXML
-    private void fileSave(){
+    public void fileSave(){
         System.out.println("file save");
     }
 
-    @FXML
-    private void fileSaveAs(){
+    public void fileSaveAs(){
         System.out.println("file save as");
     }
 
-    @FXML
-    private void exit(){
+    public void exit(){
         System.out.println("exit");
     }
 
-    public FileKezel() {
+    public FileKezel(String s) throws FileNotFoundException {
+        switch (s){
+            case "openImage":
+                fileOpen();
+                break;
+            case "save":
+                fileSave();
+                break;
+            case "saveAs":
+                fileOpen();
+                break;
+            case "exit":
+                exit();
+                break;
+        }
     }
 }

@@ -5,17 +5,19 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.projekt.photo.FileKezel">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hu.projekt.photo.Controller">
    <children>
       <MenuBar>
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#fileOpen" text="Open image" />
-              <MenuItem mnemonicParsing="false" onAction="#fileSave" text="Save" />
-              <MenuItem mnemonicParsing="false" onAction="#fileSaveAs" text="Save as" />
+              <MenuItem mnemonicParsing="false" onAction="#fileControl" text="Open image" fx:id="openImage"/>
+              <MenuItem mnemonicParsing="false" onAction="#fileControl" text="Save" fx:id="save"/>
+              <MenuItem mnemonicParsing="false" onAction="#fileControl" text="Save as" fx:id="saveAs"/>
               <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+              <MenuItem mnemonicParsing="false" onAction="#fileControl" text="Exit" fx:id="exit"/>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -28,7 +30,7 @@
 
        <VBox alignment="CENTER" prefHeight="338.0" prefWidth="600.0">
            <children>
-               <ImageView fx:id="imageView" fitHeight="264.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="imageView" fitHeight="311.0" fitWidth="451.0" pickOnBounds="true" preserveRatio="true">
                    <cursor>
                        <Cursor fx:constant="DEFAULT" />
                    </cursor>
