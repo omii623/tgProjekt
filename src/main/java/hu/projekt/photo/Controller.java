@@ -1,5 +1,6 @@
 package hu.projekt.photo;
 
+import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,10 +25,28 @@ public class Controller {
     public void fileControl(ActionEvent event) throws FileNotFoundException {
         MenuItem mi = (MenuItem) event.getSource();
         System.out.println(mi.getId());
+        String s = mi.getId().toString();
         fileKezel = new FileKezel(mi.getId());
 
-        if(mi.getId().equals("openImage"))
-            imageView.setImage(kepMegjelenit.kirajzol(fileKezel.getFileImage()));
+        if(mi.getId().equals("openImage")){
+            imageView.setImage(new Image(new FileInputStream(fileKezel.getFileImage())));
+
+            ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
+                if(imageView != null){
+                  imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
+                  imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
+                  }
+            };
+
+            MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
+            MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
+
+        }
+
     }
+
+
+
+
 
 }

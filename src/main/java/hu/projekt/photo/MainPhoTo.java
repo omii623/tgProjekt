@@ -2,6 +2,7 @@ package hu.projekt.photo;
 
 import javafx.application.Application;
 import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,20 +25,29 @@ import java.util.List;
 
 public class MainPhoTo extends Application {
 
-    public Scene scene;
+    public static Scene scene;
+    public static Stage stage;
     VBox vbox;
     BorderPane root;
 
     @Override
     public void start(Stage stage) throws IOException {
-        /*FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main.fxml"));
-        vbox = fxmlLoader.<VBox>load();
-        scene = new Scene(vbox, 1400, 800);*/
+        this.stage=stage;
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main2.fxml"));
         root = fxmlLoader.<BorderPane>load();
         scene = new Scene(root, 1400, 800);
 
+        ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
+            //if(Controller.imageView != null){
+            //  Controller.imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
+            //  Controller.imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
+            //  }
+
+        };
+
+        stage.widthProperty().addListener(stageSizeListener);
+        stage.heightProperty().addListener(stageSizeListener);
 
         stage.setMinHeight(500);
         stage.setMinWidth(875);

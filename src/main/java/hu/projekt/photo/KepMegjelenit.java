@@ -12,7 +12,7 @@ public class KepMegjelenit {
 
     public Image kirajzol(File file) throws FileNotFoundException {
         FileInputStream inputstream = new FileInputStream(file);
-        System.out.println("asd "+file);
+        //System.out.println("asd "+file);
         Image image = new Image(inputstream);
 
         return image;
