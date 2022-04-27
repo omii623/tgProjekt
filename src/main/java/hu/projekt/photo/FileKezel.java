@@ -1,5 +1,6 @@
 package hu.projekt.photo;
 
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,16 +17,14 @@ import java.io.FileNotFoundException;
 
 public class FileKezel {
 
-    private File fileImage;
+    private static File fileImage;
 
 
-    public File getFileImage() {
+    public static File getFileImage() {
         return fileImage;
     }
 
-    public void fileOpen() throws FileNotFoundException {
-        System.out.println("file open");
-
+    public static void fileOpen() throws FileNotFoundException {
         FileChooser fc = new FileChooser();
         fc.setTitle("Open image");
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Images","*.jpg","*.png"));
@@ -34,19 +33,16 @@ public class FileKezel {
         System.out.println("Path: "+fileImage);
     }
 
-    public void fileSave(){
-        System.out.println("file save");
+    public static void fileSave(){
     }
 
-    public void fileSaveAs(){
-        System.out.println("file save as");
+    public static void fileSaveAs(){
     }
 
-    public void exit(){
-        System.out.println("exit");
+    public static void exit(){
     }
 
-    public FileKezel(String s) throws FileNotFoundException {
+    public static void fileKezel(String s) throws FileNotFoundException {
         switch (s){
             case "openImage":
                 fileOpen();
@@ -61,9 +57,5 @@ public class FileKezel {
                 exit();
                 break;
         }
-    }
-
-    public FileKezel(){
-
     }
 }

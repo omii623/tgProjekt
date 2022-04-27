@@ -15,9 +15,7 @@ import java.io.FileNotFoundException;
 
 public class Controller {
 
-    FileKezel fileKezel;
-    KepMegjelenit kepMegjelenit = new KepMegjelenit();
-
+    static Image image;
     @FXML
     ImageView imageView;
 
@@ -25,24 +23,30 @@ public class Controller {
     public void fileControl(ActionEvent event) throws FileNotFoundException {
         MenuItem mi = (MenuItem) event.getSource();
         System.out.println(mi.getId());
-        fileKezel = new FileKezel(mi.getId());
+        FileKezel.fileKezel(mi.getId());
+
 
         if(mi.getId().equals("openImage")){
-            imageView.setImage(new Image(new FileInputStream(fileKezel.getFileImage())));
+            image = new Image(new FileInputStream(FileKezel.getFileImage()));
+            imageView.setImage(image);
 
             ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
                 if(imageView != null){
-                  imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
-                  imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
-                  }
+                    imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
+                    imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
+                }
             };
-
             MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
             MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
-
         }
-
     }
+
+    @FXML
+    public void imageRefresh(){
+        //image = new Image(new FileInputStream(FileKezel.getFileImage()));
+        imageView.setImage(image);
+    }
+
 
 
 

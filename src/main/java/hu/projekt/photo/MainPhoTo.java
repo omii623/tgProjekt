@@ -27,7 +27,6 @@ public class MainPhoTo extends Application {
 
     public static Scene scene;
     public static Stage stage;
-    VBox vbox;
     BorderPane root;
 
     @Override

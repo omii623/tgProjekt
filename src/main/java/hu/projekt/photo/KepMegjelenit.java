@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+//nincs hasznáva
 public class KepMegjelenit {
 
     public Image kirajzol(File file) throws FileNotFoundException {
