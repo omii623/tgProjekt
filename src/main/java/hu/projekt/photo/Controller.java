@@ -16,6 +16,7 @@ public class Controller {
 
     FileKezel fileKezel;
     KepMegjelenit kepMegjelenit = new KepMegjelenit();
+
     @FXML
     ImageView imageView;
 
@@ -25,8 +26,8 @@ public class Controller {
         System.out.println(mi.getId());
         fileKezel = new FileKezel(mi.getId());
 
-
-        imageView.setImage(kepMegjelenit.kirajzol(fileKezel.getFileImage()));
+        if(mi.getId().equals("openImage"))
+            imageView.setImage(kepMegjelenit.kirajzol(fileKezel.getFileImage()));
     }
 
 }

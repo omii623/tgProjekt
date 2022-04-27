@@ -39,12 +39,14 @@ public class MainPhoTo extends Application {
         scene = new Scene(root, 1400, 800);
 
 
+        stage.setMinHeight(500);
+        stage.setMinWidth(875);
         stage.getIcons().add(new Image("https://i.ibb.co/rMTfSQN/icon.png"));
         stage.setTitle("PhoTo");
         stage.setScene(scene);
         stage.show();
 
-        //addButons();
+        addButons();
     }
 
     public void addButons(){
@@ -95,7 +97,7 @@ public class MainPhoTo extends Application {
         }
         toolBar.getItems().add(rightSpacer);//kötépre igazít
 
-        vbox.getChildren().add(toolBar);
+        root.setBottom(toolBar);
     }
 
     public static void main(String[] args) {
