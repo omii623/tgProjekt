@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainPhoTo extends Application {
 
@@ -25,15 +27,14 @@ public class MainPhoTo extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main.fxml"));
-        scene = new Scene(fxmlLoader.load(), 1400, 800);
+        VBox vbox = fxmlLoader.<VBox>load();
+        scene = new Scene(vbox, 1400, 800);
 
         /*
         MenuBar menuBar = new MenuBar();
-        VBox vBox = new VBox(menuBar);
-        scene = new Scene(vBox, 1400, 800);
+        vbox.getChildren().add(menuBar);
 
-
-        Menu fileMenu = new Menu("File");
+        Menu fileMenu = new Menu("File2");
 
         SeparatorMenuItem line = new SeparatorMenuItem();
         MenuItem item1 = new MenuItem("Open image");
@@ -43,6 +44,15 @@ public class MainPhoTo extends Application {
 
         fileMenu.getItems().addAll(item1, item2, item3,line, item4);
         menuBar.getMenus().addAll(fileMenu);*/
+
+        List<Button> buttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
+
+        Button button = new Button();
+        button.setText("asdads");
+        buttonList.add(button);
+
+        vbox.getChildren().add(buttonList.get(0));
+
 
         stage.getIcons().add(new Image("https://i.ibb.co/rMTfSQN/icon.png"));
         stage.setTitle("PhoTo");
