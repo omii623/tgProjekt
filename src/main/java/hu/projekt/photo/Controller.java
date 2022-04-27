@@ -25,7 +25,6 @@ public class Controller {
     public void fileControl(ActionEvent event) throws FileNotFoundException {
         MenuItem mi = (MenuItem) event.getSource();
         System.out.println(mi.getId());
-        String s = mi.getId().toString();
         fileKezel = new FileKezel(mi.getId());
 
         if(mi.getId().equals("openImage")){

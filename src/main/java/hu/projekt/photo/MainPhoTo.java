@@ -34,20 +34,9 @@ public class MainPhoTo extends Application {
     public void start(Stage stage) throws IOException {
         this.stage=stage;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main.fxml"));
         root = fxmlLoader.<BorderPane>load();
         scene = new Scene(root, 1400, 800);
-
-        ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
-            //if(Controller.imageView != null){
-            //  Controller.imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
-            //  Controller.imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
-            //  }
-
-        };
-
-        stage.widthProperty().addListener(stageSizeListener);
-        stage.heightProperty().addListener(stageSizeListener);
 
         stage.setMinHeight(500);
         stage.setMinWidth(875);
