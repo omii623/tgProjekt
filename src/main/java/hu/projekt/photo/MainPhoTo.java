@@ -3,6 +3,7 @@ package hu.projekt.photo;
 import javafx.application.Application;
 import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.value.ChangeListener;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
@@ -19,6 +21,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,14 +67,48 @@ public class MainPhoTo extends Application {
         menuBar.getMenus().addAll(fileMenu);*/
 
         ToolBar toolBar = new ToolBar();
-        List<Button> buttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
+        List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
 
-        Button button = new Button();
-        button.setText("asdads");
-        buttonList.add(button);
-        Button button2 = new Button();
-        button2.setText("asdads2");
-        buttonList.add(button2);
+
+
+
+//METHODS - temp
+
+//        Rotate
+        Button rotateRightBtn = new Button();
+        rotateRightBtn.setText("Rotate right");
+        mainbuttonList.add(rotateRightBtn);
+//        rotateRightBtn.setOnAction(Muveletek.forgatJobb(imageView)); //TODO 1. itt nem éri el az imageView-t, 2. ez nem event iguess, 3. muveletek nem static so am se jó
+
+        Button rotateLeftBtn = new Button();
+        rotateLeftBtn.setText("Rotate left");
+        mainbuttonList.add(rotateLeftBtn);
+//        rotateRightBtn.setOnAction(Muveletek.forgatBal(imageView));
+
+
+//        Flip / tukroz
+        Button reflectHorizontal = new Button();
+        reflectHorizontal.setText("Flip Horizontally");
+        mainbuttonList.add(reflectHorizontal);
+//        rotateRightBtn.setOnAction(Muveletek.tukrozViz(imageView));
+
+        Button reflectVertical = new Button();
+        reflectVertical.setText("Flip Vertically");
+        mainbuttonList.add(reflectVertical);
+//        rotateRightBtn.setOnAction(Muveletek.tukrozFugg(imageView));
+
+
+
+////        mindig az utsó 2 gomb legyen sztem a zoom ha lesz
+//        Button zoomInBtn = new Button();
+//        zoomInBtn.setText("Zoom in");
+//        mainbuttonList.add(zoomInBtn);
+//
+//        Button zoomOutBtn = new Button();
+//        zoomOutBtn.setText("Zoom out");
+//        mainbuttonList.add(zoomOutBtn);
+
+
 
         final Pane leftSpacer = new Pane();
         HBox.setHgrow(
@@ -89,8 +126,8 @@ public class MainPhoTo extends Application {
 
 
         toolBar.getItems().add(leftSpacer);//kötépre igazít
-        for (int i = 0; i < 2; i++) {
-            toolBar.getItems().add(buttonList.get(i));
+        for (int i = 0; i < mainbuttonList.size(); i++) {
+            toolBar.getItems().add(mainbuttonList.get(i));
 
         }
         toolBar.getItems().add(rightSpacer);//kötépre igazít
