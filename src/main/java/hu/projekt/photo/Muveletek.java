@@ -3,10 +3,10 @@ package hu.projekt.photo;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public abstract class Muveletek {
+public /*abstract*/ class Muveletek {//TODO ki kell pluginformába szervezni
     String buttonName;
 
-    abstract public Image muvelet();
+    //abstract public Image muvelet();
 
 
 

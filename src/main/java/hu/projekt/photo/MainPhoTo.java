@@ -51,21 +51,6 @@ public class MainPhoTo extends Application {
     }
 
     public void addButons(){
-        /*
-        MenuBar menuBar = new MenuBar();
-        vbox.getChildren().add(menuBar);
-
-        Menu fileMenu = new Menu("File2");
-
-        SeparatorMenuItem line = new SeparatorMenuItem();
-        MenuItem item1 = new MenuItem("Open image");
-        MenuItem item2 = new MenuItem("Save");
-        MenuItem item3 = new MenuItem("Save as");
-        MenuItem item4 = new MenuItem("Exit");
-
-        fileMenu.getItems().addAll(item1, item2, item3,line, item4);
-        menuBar.getMenus().addAll(fileMenu);*/
-
         ToolBar toolBar = new ToolBar();
         List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
 

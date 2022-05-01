@@ -21,6 +21,18 @@ public class Controller {
     @FXML
     ImageView imageView;
 
+    public Controller(){
+        ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
+            if(imageView != null){
+                imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
+                imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
+
+            }
+        };
+        MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
+        MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
+    }
+
     @FXML
     public void fileControl(ActionEvent event) throws IOException {
         MenuItem mi = (MenuItem) event.getSource();
@@ -28,7 +40,7 @@ public class Controller {
         FileKezel.fileKezel(mi.getId());
 
 
-        if(mi.getId().equals("openImage")){
+        if(mi.getId().equals("openImage")){//TODO nem így kéne megoldani szerintem hanem a KepMegjelenít segítségével
             openImage(); //kiszerveztem hogyha kell máshova lehessen haszn.
         }
 
@@ -51,15 +63,7 @@ public class Controller {
         image = new Image(new FileInputStream(FileKezel.getFileImage()));
         imageView.setImage(image);
 
-        ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
-            if(imageView != null){
-                imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
-                imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
 
-            }
-        };
-        MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
-        MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
     }
 
     @FXML
