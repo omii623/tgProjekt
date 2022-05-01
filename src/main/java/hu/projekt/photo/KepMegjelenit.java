@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.Random;
 
 /**
  * adatátvitel
@@ -15,7 +16,7 @@ import java.io.InputStream;
 public class KepMegjelenit {
     private static final KepMegjelenit instance = new KepMegjelenit();
 
-    private Text text = new Text();
+    private Text text = new Text("");
     private ImageView imageView = new ImageView();
 
     private KepMegjelenit(){}

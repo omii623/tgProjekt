@@ -20,6 +20,7 @@ public class Controller {
     static Image image;
     @FXML
     ImageView imageView;
+    KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
 
     public Controller(){
         ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
@@ -31,6 +32,15 @@ public class Controller {
         };
         MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
         MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
+
+        ChangeListener<String> kepMegjelenitListener = (observable, oldValue, newValue) ->{
+
+            imageView = kepMegjelenit.getImageView();
+            imageView.setCache(true);
+
+            System.out.println("--listener--");
+        };
+        kepMegjelenit.getText().textProperty().addListener(kepMegjelenitListener);
     }
 
     @FXML
@@ -43,6 +53,7 @@ public class Controller {
         if(mi.getId().equals("openImage")){//TODO nem így kéne megoldani szerintem hanem a KepMegjelenít segítségével
             openImage(); //kiszerveztem hogyha kell máshova lehessen haszn.
         }
+
 
 //        azt hittem ezek is ide kellenek de láttam hogy a fileKezelben is van rá cucc
 //

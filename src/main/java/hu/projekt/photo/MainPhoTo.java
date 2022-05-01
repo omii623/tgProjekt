@@ -31,6 +31,7 @@ public class MainPhoTo extends Application {
     public static Scene scene;
     public static Stage stage;
     BorderPane root;
+    KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -54,16 +55,13 @@ public class MainPhoTo extends Application {
         ToolBar toolBar = new ToolBar();
         List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
 
-
-
-
 //METHODS - temp
 
 //        Rotate
         Button rotateRightBtn = new Button();
         rotateRightBtn.setText("Rotate right");
         mainbuttonList.add(rotateRightBtn);
-//        rotateRightBtn.setOnAction(Muveletek.forgatJobb(imageView)); //TODO 1. itt nem éri el az imageView-t, 2. ez nem event iguess, 3. muveletek nem static so am se jó
+        //rotateRightBtn.setOnAction(Muveletek.forgatJobb(kepMegjelenit.getImageView())); //TODO 1. itt nem éri el az imageView-t, 2. ez nem event iguess, 3. muveletek nem static so am se jó
 
         Button rotateLeftBtn = new Button();
         rotateLeftBtn.setText("Rotate left");
