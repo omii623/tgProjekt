@@ -1,30 +1,21 @@
 package hu.projekt.photo;
 
 import javafx.application.Application;
-import javafx.beans.property.ReadOnlyDoubleProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
-import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainPhoTo extends Application {
 
@@ -32,6 +23,7 @@ public class MainPhoTo extends Application {
     public static Stage stage;
     BorderPane root;
     KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
+    List<VBox> vboxList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -48,12 +40,13 @@ public class MainPhoTo extends Application {
         stage.setScene(scene);
         stage.show();
 
+        loadButtons();
         addButons();
     }
 
     public void addButons(){
         ToolBar toolBar = new ToolBar();
-        List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
+/*        List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
 
 //METHODS - temp
 
@@ -90,8 +83,9 @@ public class MainPhoTo extends Application {
 //        Button zoomOutBtn = new Button();
 //        zoomOutBtn.setText("Zoom out");
 //        mainbuttonList.add(zoomOutBtn);
+*/
 
-
+        VBox vbox = new VBox();
 
         final Pane leftSpacer = new Pane();
         HBox.setHgrow(
@@ -109,8 +103,8 @@ public class MainPhoTo extends Application {
 
 
         toolBar.getItems().add(leftSpacer);//kötépre igazít
-        for (int i = 0; i < mainbuttonList.size(); i++) {
-            toolBar.getItems().add(mainbuttonList.get(i));
+        for (VBox value : vboxList) {
+            toolBar.getItems().add(value);
 
         }
         toolBar.getItems().add(rightSpacer);//kötépre igazít
@@ -121,6 +115,61 @@ public class MainPhoTo extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+    private void loadButtons(){
+        String[] pathnames;
+
+        String s;
+        s = getClass().getResource("").toString().substring(6);//linux - 5, windows - 6
+
+        s+="muveletekChild/";
+        File f = new File(s);
+        pathnames = f.list();
+
+        for (String pathname : pathnames) {
+            //System.out.println(pathnames);
+            String[] pathnameArray = pathname.split("\\.");
+            System.out.println("--> "+pathnameArray[0]);
+            createFXML(pathnameArray[0]);
+            VBox vBox;
+            try {
+                vBox = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("plugins/"+pathnameArray[0]+".fxml")));
+                vboxList.add(vBox);
+                System.out.println("siker");
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("nemsiker");
+            }
+        }
+    }
+
+    private void createFXML(String name){
+        String s;
+        s = getClass().getResource("").toString().substring(6);s+="plugins/";//linux - 5, windows - 6
+
+        File myObj = new File(s+name+".fxml");
+        System.out.println("Absolute path: " + myObj.getAbsolutePath());
+        try {
+            FileWriter myWriter = new FileWriter(myObj);
+            myWriter.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                    "\n" +
+                    "<?import javafx.scene.control.*?>\n" +
+                    "<?import javafx.scene.layout.*?>\n" +
+                    "\n" +
+                    "<VBox fx:id=\"vbox\" alignment=\"TOP_CENTER\" maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"64.0\" prefWidth=\"136.0\" xmlns=\"http://javafx.com/javafx/16\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"hu.projekt.photo.muveletekChild."+name+"\">\n" +
+                    "    <children>\n" +
+                    "        <Label fx:id=\"label\" alignment=\"TOP_CENTER\" text=\"Label\" /><HBox fx:id=\"hbox\" alignment=\"CENTER\" prefHeight=\"53.0\" prefWidth=\"136.0\" />\n" +
+                    "    </children>\n" +
+                    "</VBox>\n");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

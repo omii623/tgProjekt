@@ -6,4 +6,6 @@ module com.example.photo {
 
     opens hu.projekt.photo to javafx.fxml;
     exports hu.projekt.photo;
+    exports hu.projekt.photo.muveletekChild;
+    opens hu.projekt.photo.muveletekChild to javafx.fxml;
 }
