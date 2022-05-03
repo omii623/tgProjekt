@@ -27,6 +27,8 @@ public abstract class Muveletek implements Initializable {
 
     abstract public void buttonSetup();
 
+    abstract public void buttonEvents();
+
     public void setText(String text){
         this.text = text;
     }
@@ -34,6 +36,7 @@ public abstract class Muveletek implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonSetup();
+        buttonEvents();
         label.setText(text);
 
         vbox.setStyle(" -fx-border-color: #2e8b57;" +

@@ -1,6 +1,8 @@
 package hu.projekt.photo.muveletekChild;
 
 import hu.projekt.photo.Muveletek;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
@@ -24,5 +26,14 @@ public class Forgat extends Muveletek{
         buttonList.add(button2);
 
         setText("FORGAT");
+    }
+
+    @Override
+    public void buttonEvents() {
+        EventHandler<ActionEvent> event = e -> System.out.println("==>jobb<==");
+        buttonList.get(0).setOnAction(event);
+
+        EventHandler<ActionEvent> event2 = e -> System.out.println("==>bal<==");
+        buttonList.get(1).setOnAction(event2);
     }
 }
