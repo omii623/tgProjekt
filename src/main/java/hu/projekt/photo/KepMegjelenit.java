@@ -17,7 +17,7 @@ public class KepMegjelenit {
     private static final KepMegjelenit instance = new KepMegjelenit();
 
     private Text text = new Text("");
-    private ImageView imageView = new ImageView();
+    private Image image = new Image("https://i.ibb.co/rMTfSQN/icon.png");
 
     private KepMegjelenit(){}
 
@@ -33,11 +33,11 @@ public class KepMegjelenit {
         this.text.setText(data);
     }
 
-    public ImageView getImageView() {
-        return imageView;
+    public Image getImage() {
+        return image;
     }
 
-    public void setImageView(ImageView imageView) {
-        this.imageView = imageView;
+    public void setImage(Image image) {
+        this.image = image;
     }
 }
