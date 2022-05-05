@@ -38,6 +38,9 @@ public class KepMegjelenit {
     }
 
     public void setImage(Image image) {
+        Random random = new Random();
+        int rand = random.nextInt();
+        setText(""+rand);
         this.image = image;
     }
 }

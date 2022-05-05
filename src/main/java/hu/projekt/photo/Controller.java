@@ -35,8 +35,8 @@ public class Controller {
 
         ChangeListener<String> kepMegjelenitListener = (observable, oldValue, newValue) ->{
 
-            imageView = kepMegjelenit.getImageView();
-            imageView.setCache(true);
+            image = kepMegjelenit.getImage();
+            imageView.setImage(image);
 
             System.out.println("--listener--");
         };
@@ -53,7 +53,6 @@ public class Controller {
         if(mi.getId().equals("openImage")){//TODO nem így kéne megoldani szerintem hanem a KepMegjelenít segítségével
             openImage(); //kiszerveztem hogyha kell máshova lehessen haszn.
         }
-
 
 //        azt hittem ezek is ide kellenek de láttam hogy a fileKezelben is van rá cucc
 //
