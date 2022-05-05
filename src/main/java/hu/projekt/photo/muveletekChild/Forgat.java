@@ -3,11 +3,12 @@ package hu.projekt.photo.muveletekChild;
 import hu.projekt.photo.Muveletek;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.scene.image.Image;
+import javafx.scene.image.PixelReader;
+import javafx.scene.image.PixelWriter;
+import javafx.scene.image.WritableImage;
+import javafx.scene.paint.Color;
 
 public class Forgat extends Muveletek{
 
@@ -30,10 +31,19 @@ public class Forgat extends Muveletek{
 
     @Override
     public void buttonEvents() {
-        EventHandler<ActionEvent> event = e -> System.out.println("==>jobb<==");
+        EventHandler<ActionEvent> event = e -> {
+            Image image = kepMegjelenit.getImage();
+            System.out.println("==>jobb<==");
+        };
         buttonList.get(0).setOnAction(event);
 
-        EventHandler<ActionEvent> event2 = e -> System.out.println("==>bal<==");
+        EventHandler<ActionEvent> event2 = e -> {
+            Image image = kepMegjelenit.getImage();
+            System.out.println("==>bal<==");
+        };
         buttonList.get(1).setOnAction(event2);
     }
+
+
+
 }

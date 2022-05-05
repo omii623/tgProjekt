@@ -17,7 +17,7 @@ public class KepMegjelenit {
     private static final KepMegjelenit instance = new KepMegjelenit();
 
     private Text text = new Text("");
-    private Image image = new Image("https://i.ibb.co/rMTfSQN/icon.png");
+    private Image image= new Image("https://i.ibb.co/rMTfSQN/icon.png");
 
     private KepMegjelenit(){}
 
@@ -38,9 +38,10 @@ public class KepMegjelenit {
     }
 
     public void setImage(Image image) {
+        this.image = image;
+
         Random random = new Random();
         int rand = random.nextInt();
         setText(""+rand);
-        this.image = image;
     }
 }

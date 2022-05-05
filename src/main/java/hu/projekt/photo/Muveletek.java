@@ -24,6 +24,7 @@ public abstract class Muveletek implements Initializable {
     Label label;
     protected List<Button> buttonList = new ArrayList<>();
     protected String text = "name";
+    protected KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
 
     abstract public void buttonSetup();
 

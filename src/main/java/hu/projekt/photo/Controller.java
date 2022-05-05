@@ -3,6 +3,7 @@ package hu.projekt.photo;
 import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
@@ -13,14 +14,22 @@ import javafx.scene.text.Text;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class Controller {
+public class Controller implements Initializable {
 
     static Image image;
     @FXML
     ImageView imageView;
     KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        image = kepMegjelenit.getImage();
+        imageView.setImage(image);
+    }
 
     public Controller(){
         ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
@@ -54,34 +63,12 @@ public class Controller {
             openImage(); //kiszerveztem hogyha kell máshova lehessen haszn.
         }
 
-//        azt hittem ezek is ide kellenek de láttam hogy a fileKezelben is van rá cucc
-//
-//        if(mi.getId().equals("exit")){
-//            System.exit(0);
-//        }
-//
-//        if(mi.getId().equals("save")){
-//            FileKezel.fileSave();
-//        }
-//
-//        if(mi.getId().equals("saveAs")){
-//            FileKezel.fileSaveAs();
-//        }
     }
 
     public void openImage() throws FileNotFoundException {
         image = new Image(new FileInputStream(FileKezel.getFileImage()));
-        imageView.setImage(image);
-
-
+        kepMegjelenit.setImage(image);
     }
-
-    @FXML
-    public void imageRefresh(){
-        //image = new Image(new FileInputStream(FileKezel.getFileImage()));
-        imageView.setImage(image);
-    }
-
 
 
 
