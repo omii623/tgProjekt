@@ -158,7 +158,16 @@ public class MainPhoTo extends Application {
 
     private void createFXML(String name){
         String s;
-        s = getClass().getResource("").toString().substring(6);s+="plugins/";//linux - 5, windows - 6
+
+        if(Objects.equals(System.getProperty("os.name").split(" ")[0], "Windows"))
+        {
+            s = getClass().getResource("").toString().substring(6);//linux - 5, windows - 6
+        }
+        else // if linux
+        {
+            s = getClass().getResource("").toString().substring(5);//linux - 5, windows - 6
+        }
+        s+="plugins/";
 
         File myObj = new File(s+name+".fxml");
         System.out.println("Absolute path: " + myObj.getAbsolutePath());
