@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -120,7 +121,19 @@ public class MainPhoTo extends Application {
         String[] pathnames;
 
         String s;
-        s = getClass().getResource("").toString().substring(6);//linux - 5, windows - 6
+
+        System.out.println((System.getProperty("os.name").split(" ")[0]));
+
+        if(Objects.equals(System.getProperty("os.name").split(" ")[0], "Windows"))
+        {
+            s = getClass().getResource("").toString().substring(6);//linux - 5, windows - 6
+        }
+        else // if linux
+        {
+            s = getClass().getResource("").toString().substring(5);//linux - 5, windows - 6
+        }
+
+
 
         s+="muveletekChild/";
         File f = new File(s);
