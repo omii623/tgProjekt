@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tgProjekt" />
+        <module name="tg2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="PhoTo" target="17" />
+      <module name="tg2" target="17" />
       <module name="tgProjekt" target="17" />
     </bytecodeTargetLevel>
   </component>
