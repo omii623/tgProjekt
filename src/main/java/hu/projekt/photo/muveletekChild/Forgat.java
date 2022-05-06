@@ -15,8 +15,8 @@ public class Forgat extends Muveletek{
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("jobb");
-        Button button2 = new Button("bal");
+        Button button = new Button("bal");
+        Button button2 = new Button("jobb");
 
         button.setMaxWidth(60);
         button.setMinWidth(60);
