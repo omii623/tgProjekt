@@ -4,9 +4,9 @@
 A PhoTo egy egyszerű és gyors fotómegjelenítő és szerkesztő alkalmazás Windows és Linux rendszerre.
 Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építsünk fel. A PhoTo egyszerűsége csodálatra méltó.
 
-## Ebben a szegmensben egy tesztelési folyamat elevenedik meg, hogy a felhasználó biztosan tudja, hogy amit kap, az úgy működik, ahogy annak kell.
-
-
+```diff
+Ebben a szegmensben egy tesztelési folyamat elevenedik meg, hogy a felhasználó biztosan tudja, hogy amit kap, az úgy működik, ahogy annak kell.
+```
 
 ## Funkciók tesztelése
 * ###  Forgatás tesztelés
@@ -16,27 +16,56 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
     - 180°
     - 270°
     - 360°
+
+```diff
+ + Forgatás testelése sikers
+```
+
 * ###  Tükrözés tesztelés
   - Különböző tükrözési metódusokra is lehetőségünk nyílik, ezek pedig: 
     -   vízszintes
     -   függőleges
 
-## A tükrözés és forgási metódusok bár elérhetőek, a valóságban az importált képpel nem kezdenek semmit. 
+```
+ - Tükrözés még nem kész
+```
 
 * ###  Filterek tesztelése
   - A programban lehetőségünk van különféle szűrők közül választani. Ide sorolhatjuk például a fekete-fehér filtert.   
+
+```
+ - Filterek még nem kész
+```
+
 * ###  Fényerő változtatásának tesztelése
   - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
+
+```
+ - Fényerő változtatás még nem kész
+```
+  
 * ###  Kép mentésének tesztelése
   - A kép lementhtő támogatott formátumok bármelyikére és tetszőleges helyre le is lehet menteni azt.
-  
-  A kép mentése placebo módon van megvalósítva, tehát nincs.
+
+```diff
+ - Megjelenik a felület de nem történik meg a mentés
+```
+
 * ###  Kép megnyitásának tesztelése
   - A kép megnyitásása a támogatott formátumokban képes. A megnyitást követően használhatók tetszőlegesen a funkciók.
- 
+
+```
+ + Sikeresen meg lehet nyitni képet
+ - hiba ha a mégsemre nyomunk
+```
+
 ## Támogatott formátumok tesztelése
    * .png 
    * .jpg
+
+```
+ + Sikeres teszt
+```
 
 ## A támogatott formátumok közül mindkét esetben megnyitható a kívánt kép, a folyamat: bal felső menü, open file, kiválasztjuk a file-unkat. csak png vagy jpg formátumú file elérhető megnyitásra. Rákattintva behozza a képet a képkezelő közepére, megfelelően látható méretben. 
  
