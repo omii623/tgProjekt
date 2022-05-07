@@ -33,15 +33,15 @@ public class Forgat extends Muveletek{
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
-            System.out.println("==>jobb<==");
-            kepMegjelenit.setImage(rotateImage(image, "jobb"));
+            //System.out.println("==>jobb<==");
+            kepMegjelenit.setImage(rotateImage(image, "bal"));
         };
         buttonList.get(0).setOnAction(event);
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
-            System.out.println("==>bal<==");
-            kepMegjelenit.setImage(rotateImage(image, "bal"));
+            //System.out.println("==>bal<==");
+            kepMegjelenit.setImage(rotateImage(image, "jobb"));
         };
         buttonList.get(1).setOnAction(event2);
     }
