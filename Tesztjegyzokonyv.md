@@ -24,7 +24,7 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
     -   vízszintes
     -   függőleges
 
-> 🟥 Tükrözés még nem kész
+> 🟩 Tükrözés testelése sikers
 
 * ###  Filterek tesztelése
   - A programban lehetőségünk van különféle szűrők közül választani. Ide sorolhatjuk például a fekete-fehér filtert.   
@@ -74,7 +74,7 @@ A program egy egyszerű és átlátható UI-al, azaz felhasználói felülettel 
 A kép módosítása után lehetőség van elvetni a változtatásokat, ebben az esetben az eredeti file kerül megtartásra, nem íródik felül.
 Ez biztosítja, hogy csak azon változtatások mehessenek végbe, amelyek tényleg kívánatosak a felhasználó által.
 
-## Mentésre jelenleg nincs lehetőség, csak egy placebo metódus van. a save vagy save as menüpontra kattintva elhihetjük, hogy elmenti a file-t a rendszer. Természetesen ez mielőbbi javításra szorul. 
+> 🟥 Mentésre jelenleg nincs lehetőség, csak egy placebo metódus van. a save vagy save as menüpontra kattintva elhihetjük, hogy elmenti a file-t a rendszer. Természetesen ez mielőbbi javításra szorul. 
 
 
 ## Rendszerkövetelmények
