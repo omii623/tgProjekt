@@ -17,7 +17,8 @@ public class KepMegjelenit {
     private static final KepMegjelenit instance = new KepMegjelenit();
 
     private Text text = new Text("");
-    private Image image= new Image("https://i.ibb.co/rMTfSQN/icon.png");
+    private Image image= new Image("file:img/pho-to.png");
+    //private Image image= new Image("https://i.ibb.co/rMTfSQN/icon.png");
 
     private KepMegjelenit(){}
 

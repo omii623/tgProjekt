@@ -33,14 +33,14 @@ public class Tukroz extends Muveletek {
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
-            System.out.println("==>vízszintes<==");
+            //System.out.println("==>vízszintes<==");
             kepMegjelenit.setImage(mirrorImage(image, "vizTuk"));
         };
         buttonList.get(0).setOnAction(event);
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
-            System.out.println("==>függőleges<==");
+            //System.out.println("==>függőleges<==");
             kepMegjelenit.setImage(mirrorImage(image, "fugTuk"));
         };
         buttonList.get(1).setOnAction(event2);
@@ -67,7 +67,6 @@ public class Tukroz extends Muveletek {
                 for (int lx = 0, rx = height * 2 - 1; lx < height; lx++, rx--) {
 
                     pixelWriter.setColor((width - 1) - lx, y, pixelReader.getColor(lx, y));
-
                 }
             }
         }
