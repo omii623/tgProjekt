@@ -34,7 +34,8 @@ public class Filter extends Muveletek{
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
             //System.out.println("==>jobb<==");
-                kepMegjelenit.setImage(monoImage(image, "mono"));
+                kepMegjelenit.setImage(monoImage(monoImage(image, "mono"), "mono"));
+
         };
         buttonList.get(0).setOnAction(event);
 
@@ -48,8 +49,8 @@ public class Filter extends Muveletek{
     }
 
     public static Image monoImage(Image image,String s) {
-        int height = (int) image.getHeight();
-        int width = (int) image.getWidth();
+        int height = (int) Math.floor(image.getHeight());
+        int width = (int) Math.floor(image.getWidth());
 
         final PixelReader pixelReader = image.getPixelReader();
 
@@ -59,10 +60,13 @@ public class Filter extends Muveletek{
             for (int i = 0; i < height; i++) {
                 for (int j = 0; j < width; j++) {
 
-                    Color color = pixelReader.getColor(j, i);
+
+                    Color color = pixelReader.getColor(j,i);
                     double grey = (color.getBlue() + color.getGreen() + color.getRed()) / 3;
                     color = new Color(grey, grey, grey, 0.9);
-                    pixelWriter.setColor(i, j, color);
+
+
+                    pixelWriter.setColor (i,j, color);
 
                 }
 
