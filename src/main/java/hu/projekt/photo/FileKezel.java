@@ -1,6 +1,7 @@
 package hu.projekt.photo;
 
 import javafx.stage.FileChooser;
+import javafx.stage.Window;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -47,6 +48,7 @@ public class FileKezel {
         fileSavePure();
 
         System.out.println("Saved to path: "+fileImage);
+
     }
 
     public static void fileSavePure() throws IOException {

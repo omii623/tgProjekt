@@ -16,7 +16,7 @@ public class Filter extends Muveletek{
     @Override
     public void buttonSetup() {
         Button button = new Button("mono");
-        Button button2 = new Button("vissza");
+        Button button2 = new Button("palett");
 
         button.setMaxWidth(60);
         button.setMinWidth(60);
@@ -27,6 +27,7 @@ public class Filter extends Muveletek{
         buttonList.add(button2);
 
         setText("Filter");
+
     }
 
     @Override
@@ -42,9 +43,9 @@ public class Filter extends Muveletek{
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
             //System.out.println("==>jobb<==");
-            kepMegjelenit.setImage(monoImage(image, "vissza"));
+            kepMegjelenit.setImage(monoImage(monoImage(image, "palett"), "palett"));
         };
-        buttonList.get(1).setOnAction(event);
+        buttonList.get(1).setOnAction(event2);
 
     }
 
@@ -72,7 +73,21 @@ public class Filter extends Muveletek{
 
             }
         }
-        if(s.equals("vissza")){
+        if(s.equals("palett")){
+            for (int i = 0; i < height; i++) {
+                for (int j = 0; j < width; j++) {
+
+
+                    Color color = pixelReader.getColor(j,i);
+                    if(color.getRed() <= 200){
+                        double red = color.getRed() + 40;
+                    }
+                    color = new Color(color.getGreen(), color.getBlue(), color.getRed(), 0.9);
+                    pixelWriter.setColor(i,j, color);
+
+                }
+
+            }
         }
 
         return writableImage;

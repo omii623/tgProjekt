@@ -33,6 +33,7 @@ public class MainPhoTo extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainPhoTo.class.getResource("main.fxml"));
         root = fxmlLoader.<BorderPane>load();
         scene = new Scene(root, 1400, 800);
+        stage.setMaximized(true);    //itt full screenre rakom az egészet
 
         stage.setMinHeight(500);
         stage.setMinWidth(875);
