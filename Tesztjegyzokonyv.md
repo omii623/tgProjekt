@@ -29,7 +29,8 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
 * ###  Filterek tesztelése
   - A programban lehetőségünk van különféle szűrők közül választani. Ide sorolhatjuk például a fekete-fehér filtert.   
 
-> 🟥 Filterek még nem kész
+> 🟩 Filterek testelése sikeres
+> 🟥 nincs viszavonásra lehetőség
 
 * ###  Fényerő változtatásának tesztelése
   - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
@@ -45,7 +46,7 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
   - A kép megnyitásása a támogatott formátumokban képes. A megnyitást követően használhatók tetszőlegesen a funkciók.
 
 > 🟩 Sikeresen meg lehet nyitni képet
-> 🟥 hiba ha a mégsemre nyomunk
+> 🟩 javítva (hiba ha a mégsemre nyomunk)
 
 ## Támogatott formátumok tesztelése
    * .png 

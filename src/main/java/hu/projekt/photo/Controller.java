@@ -1,6 +1,8 @@
 package hu.projekt.photo;
 
+import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,13 +36,25 @@ public class Controller implements Initializable {
     public Controller(){
         ChangeListener<Number> stageSizeListener = (observable, oldValue, newValue) ->{
             if(imageView != null){
-                imageView.setFitHeight(MainPhoTo.scene.getHeight()-100);
-                imageView.setFitWidth(MainPhoTo.scene.getWidth()-100);
+                imageView.setFitHeight(MainPhoTo.scene.getHeight()-150);
+                imageView.setFitWidth(MainPhoTo.scene.getWidth()-150);
 
             }
         };
         MainPhoTo.stage.widthProperty().addListener(stageSizeListener);
         MainPhoTo.stage.heightProperty().addListener(stageSizeListener);
+
+        MainPhoTo.stage.maximizedProperty().addListener(new ChangeListener<Boolean>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) {
+                /*if(imageView != null){
+                    imageView.setFitHeight(MainPhoTo.scene.getHeight()-150);
+                    imageView.setFitWidth(MainPhoTo.scene.getWidth()-150);
+                }*/
+                System.out.println("--nagyitas/kicsinyites--");
+            }
+        });//valamiert nem jo
 
         ChangeListener<String> kepMegjelenitListener = (observable, oldValue, newValue) ->{
 
@@ -66,8 +80,11 @@ public class Controller implements Initializable {
     }
 
     public void openImage() throws FileNotFoundException {
-        image = new Image(new FileInputStream(FileKezel.getFileImage()));
-        kepMegjelenit.setImage(image);
+        if(FileKezel.getFileImage()!=null){
+            image = new Image(new FileInputStream(FileKezel.getFileImage()));
+            kepMegjelenit.setImage(image);
+        }
+
     }
 
 

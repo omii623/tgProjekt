@@ -48,45 +48,6 @@ public class MainPhoTo extends Application {
 
     public void addButons(){
         ToolBar toolBar = new ToolBar();
-/*        List<Button> mainbuttonList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
-
-//METHODS - temp
-
-//        Rotate
-        Button rotateRightBtn = new Button();
-        rotateRightBtn.setText("Rotate right");
-        mainbuttonList.add(rotateRightBtn);
-        //rotateRightBtn.setOnAction(Muveletek.forgatJobb(kepMegjelenit.getImageView())); //TODO 1. itt nem éri el az imageView-t, 2. ez nem event iguess, 3. muveletek nem static so am se jó
-
-        Button rotateLeftBtn = new Button();
-        rotateLeftBtn.setText("Rotate left");
-        mainbuttonList.add(rotateLeftBtn);
-//        rotateRightBtn.setOnAction(Muveletek.forgatBal(imageView));
-
-
-//        Flip / tukroz
-        Button reflectHorizontal = new Button();
-        reflectHorizontal.setText("Flip Horizontally");
-        mainbuttonList.add(reflectHorizontal);
-//        rotateRightBtn.setOnAction(Muveletek.tukrozViz(imageView));
-
-        Button reflectVertical = new Button();
-        reflectVertical.setText("Flip Vertically");
-        mainbuttonList.add(reflectVertical);
-//        rotateRightBtn.setOnAction(Muveletek.tukrozFugg(imageView));
-
-
-
-////        mindig az utsó 2 gomb legyen sztem a zoom ha lesz
-//        Button zoomInBtn = new Button();
-//        zoomInBtn.setText("Zoom in");
-//        mainbuttonList.add(zoomInBtn);
-//
-//        Button zoomOutBtn = new Button();
-//        zoomOutBtn.setText("Zoom out");
-//        mainbuttonList.add(zoomOutBtn);
-*/
-
         VBox vbox = new VBox();
 
         final Pane leftSpacer = new Pane();
@@ -191,8 +152,5 @@ public class MainPhoTo extends Application {
             e.printStackTrace();
         }
     }
-
-
-
 
 }
