@@ -54,14 +54,14 @@ public class Tukroz extends Muveletek {
 
         WritableImage writableImage = new WritableImage(width,height);
         PixelWriter pixelWriter = writableImage.getPixelWriter();
-        if(s.equals("vizTuk")) {
+        if(s.equals("fugTuk")) {
             for (int j = 0, k = width-1; j < width; j++,k--) {
                 for (int i = 0; i < height; i++) {
                     pixelWriter.setColor(j,i,pixelReader.getColor(k,i));
                 }
             }
         }
-        if(s.equals("fugTuk")) {
+        if(s.equals("vizTuk")) {
             for (int j = 0, k = height-1; j < height; j++,k--) {
                 for (int i = 0; i < width; i++) {
                     pixelWriter.setColor(i,j,pixelReader.getColor(i,k));

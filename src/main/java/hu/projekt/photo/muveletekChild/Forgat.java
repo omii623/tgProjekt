@@ -58,10 +58,10 @@ public class Forgat extends Muveletek{
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 switch (s){
-                    case "jobb":
+                    case "bal":
                         pixelWriter.setColor((height-1)-i, j, pixelReader.getColor(j,i));
                         break;
-                    case "bal":
+                    case "jobb":
                         pixelWriter.setColor(i,(width-1)-j, pixelReader.getColor(j,i));
                         break;
                 }
