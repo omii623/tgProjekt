@@ -49,6 +49,7 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
 
 > 🟩 Tetszőleges helyre történhet a mentés - 04.22  
 > 🟥 Megjelenik a felület, de nem történik meg a mentés - 04.22  
+> 🟩 A mentés javítva - 05.23
 
 * ###  Kép megnyitásának tesztelése
   - A kép megnyitásása a támogatott formátumokban képes. A megnyitást követően használhatók tetszőlegesen a funkciók.
@@ -92,6 +93,7 @@ A kép módosítása után lehetőség van elvetni a változtatásokat, ebben az
 Ez biztosítja, hogy csak azon változtatások mehessenek végbe, amelyek tényleg kívánatosak a felhasználó által.
 
 > 🟥 Mentésre jelenleg nincs lehetőség, csak egy placebo metódus van. a save vagy save as menüpontra kattintva "elhihetjük", hogy elmenti a file-t a rendszer. Természetesen ez mielőbbi javításra szorul. - 04.22  
+> 🟩 A mentés megfelelően működik, ténylegesen módosítja a file-t, a mentés másként pedig létrehozza a kívánt állományt. - 05.23  
 
 
 ## Rendszerkövetelmények
