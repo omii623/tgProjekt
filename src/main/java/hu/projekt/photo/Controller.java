@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import java.awt.image.RenderedImage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,6 +22,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     static Image image;
+    FileKezel fk = new FileKezel();
     @FXML
     ImageView imageView;
     KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
@@ -68,7 +70,9 @@ public class Controller implements Initializable {
     public void fileControl(ActionEvent event) throws IOException {
         MenuItem mi = (MenuItem) event.getSource();
         System.out.println(mi.getId());
-        FileKezel.fileKezel(mi.getId());
+
+        fk.fileKezel(mi.getId());
+
 
 
         if(mi.getId().equals("openImage")){//TODO nem így kéne megoldani szerintem hanem a KepMegjelenít segítségével
@@ -78,8 +82,8 @@ public class Controller implements Initializable {
     }
 
     public void openImage() throws FileNotFoundException {
-        if(FileKezel.getFileImage()!=null){
-            image = new Image(new FileInputStream(FileKezel.getFileImage()));
+        if(fk.getFileImage()!=null){
+            image = new Image(new FileInputStream(fk.getFileImage()));
             kepMegjelenit.setImage(image);
         }
 

@@ -1,5 +1,7 @@
 package hu.projekt.photo;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -18,7 +20,6 @@ public class KepMegjelenit {
 
     private Text text = new Text("");
     private Image image= new Image("file:img/pho-to.png");
-    //private Image image= new Image("https://i.ibb.co/rMTfSQN/icon.png");
 
     private KepMegjelenit(){}
 
@@ -45,4 +46,6 @@ public class KepMegjelenit {
         int rand = random.nextInt();
         setText(""+rand);
     }
+
+
 }
