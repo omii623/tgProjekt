@@ -12,6 +12,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
 import static hu.projekt.photo.Controller.image3;
+import static hu.projekt.photo.Controller.kepek;
 import static hu.projekt.photo.MainPhoTo.font;
 import static hu.projekt.photo.muveletekChild.Forgat.rotateImage;
 
@@ -50,6 +51,7 @@ public class Tukroz extends Muveletek {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
             image3 = image;
+            kepek.add(image);
             //System.out.println("==>vízszintes<==");
             kepMegjelenit.setImage(mirrorImage(image, "vizTuk"));
         };
@@ -58,6 +60,7 @@ public class Tukroz extends Muveletek {
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
             image3 = image;
+            kepek.add(image);
             //System.out.println("==>függőleges<==");
             kepMegjelenit.setImage(mirrorImage(image, "fugTuk"));
         };

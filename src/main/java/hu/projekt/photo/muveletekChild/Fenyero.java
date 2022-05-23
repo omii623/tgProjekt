@@ -13,6 +13,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
 import static hu.projekt.photo.Controller.image3;
+import static hu.projekt.photo.Controller.kepek;
 import static hu.projekt.photo.MainPhoTo.font;
 
 public class Fenyero extends Muveletek{
@@ -51,6 +52,7 @@ public class Fenyero extends Muveletek{
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
             image3 = image;
+            kepek.add(image);
             //System.out.println("==>jobb<==");
             kepMegjelenit.setImage(fenyeroImage(fenyeroImage(image, "plus"), "plus"));
 
@@ -60,6 +62,7 @@ public class Fenyero extends Muveletek{
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
             image3 = image;
+            kepek.add(image);
             //System.out.println("==>jobb<==");
             kepMegjelenit.setImage(fenyeroImage(fenyeroImage(image, "minus"), "minus"));
         };

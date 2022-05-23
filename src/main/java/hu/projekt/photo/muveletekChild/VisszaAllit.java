@@ -12,8 +12,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
-import static hu.projekt.photo.Controller.image2;
-import static hu.projekt.photo.Controller.image3;
+import static hu.projekt.photo.Controller.*;
 import static hu.projekt.photo.MainPhoTo.font;
 
 public class VisszaAllit extends Muveletek{
@@ -78,8 +77,10 @@ public class VisszaAllit extends Muveletek{
             image = image2;
             return image;
         }
-        if(s.equals("1step")){
-            image = image3;
+        if(s.equals("1step") && kepek != null && kepek.size() > 0){
+            image = kepek.get(kepek.size()-1);
+            kepek.remove(kepek.get(kepek.size()-1));
+            //image = image3;
             return image;
         }
         return image;

@@ -16,6 +16,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -24,6 +26,7 @@ public class Controller implements Initializable {
     public static Image image;
     public static Image image2;
     public static Image image3;
+    public static List<Image> kepek = new ArrayList<>();
     FileKezel fk = new FileKezel();
     @FXML
     ImageView imageView;
