@@ -36,7 +36,9 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
 > 🟩 Fekete-fehér filter testelése sikeres - 🟥 Hiba: közben elfordítja a képet - 05.17  
 > 🟩 Forgatási hiba javítva - 05.19  
 > 🟩 Egyéb filter (Palett) testelése sikeres - 05.17  
-> 🟥 nincs viszavonásra lehetőség  
+> 🟥 nincs viszavonásra lehetőség
+> 🟥 Hiba: a visszavonás kizárólag a legelső képnél működik.
+> 🟩 Megfelelően működik, hibák javítva. 
 
 * ###  Fényerő változtatásának tesztelése
   - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
