@@ -41,7 +41,8 @@ Célunk az volt, hogy egy könnyen kezelhető fotónézegető programot építs�
 * ###  Fényerő változtatásának tesztelése
   - A kép fényerejét is változtathatjuk a program által, ami azt eredményezi majd, hogy világosabb, vagy sötétebb árnyalatú kép kerül megjelenítésre.
 
-> 🟥 Fényerő változtatás még nincs megvalósítva  
+> 🟥 Fényerő változtatás még nincs megvalósítva
+> 🟩 Fényerő tesztelése sikeres - 05.23
   
 * ###  Kép mentésének tesztelése
   - A kép lementhtő támogatott formátumok bármelyikére és tetszőleges helyre le is lehet menteni azt.
