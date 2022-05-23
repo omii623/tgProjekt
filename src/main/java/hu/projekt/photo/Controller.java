@@ -6,9 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -85,6 +83,23 @@ public class Controller implements Initializable {
             kepMegjelenit.setImage(image);
         }
 
+    }
+
+    public void aboutMeth()
+    {
+        ButtonType exitButton = new ButtonType("Cancel");
+        Alert alert = new Alert(Alert.AlertType.NONE, "",exitButton);
+
+        alert.setTitle("About");
+        alert.setHeaderText("About");
+        alert.setContentText("""
+                The program PhoTo was created for the purpose of handling pictures properly. It was made in about 2 months to ensure the optimal experience for the users. It has some functions with which you can handle the picture, including rotation, flipping, or various filters.\s
+                
+                The functions are easily accessible and organized by the panels that have been created at the bottom of the program. Just click on the button of the function that you want to apply, it is that simple. Handling the files has been made dynamically as well, you can reach any of your pictures (as long as they are supported extension-wise). No matter where they are on the computer! You do not have to handle this task with a static folder. You also have 2 types of saves available.
+
+                The program was created by three ambitious young people as a Project for their Programming 1 course. The team consists of Tamás Tóth, Gergő Török and Máté Subicz. Thank you for taking a look at it, hope you are satisfied.""");
+
+        alert.show();
     }
 
 
