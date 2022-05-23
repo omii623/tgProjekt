@@ -35,5 +35,16 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:15.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:win:15.0.1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/TrayNotification-master.zip!/TrayNotification-master/src" />
+          <root url="jar://$USER_HOME$/Downloads/TrayNotification-master.zip!/TrayNotification-master/src/main/java" />
+          <root url="jar://$USER_HOME$/Downloads/TrayNotification-master.zip!/TrayNotification-master/src/test/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

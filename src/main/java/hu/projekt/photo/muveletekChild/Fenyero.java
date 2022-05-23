@@ -19,8 +19,8 @@ public class Fenyero extends Muveletek{
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("PLUS");
-        Button button2 = new Button("MINUS");
+        Button button = new Button("PLUSZ");
+        Button button2 = new Button("MINUSZ");
 
         button.setFont(font);
         button.setStyle(" -fx-background-color: transparent;" + " -fx-text-fill: white; " + " -fx-border-color: white;" + "-fx-border-width: 1px;" + "-fx-border-radius: 4px;");
@@ -41,7 +41,7 @@ public class Fenyero extends Muveletek{
         buttonList.add(button);
         buttonList.add(button2);
 
-        setText( "FENYERO" );
+        setText( "FÉNYERÖ" );
 
     }
 

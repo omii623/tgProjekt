@@ -21,7 +21,8 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    static Image image;
+    public static Image image;
+    public static Image image2;
     FileKezel fk = new FileKezel();
     @FXML
     ImageView imageView;
@@ -30,6 +31,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         image = kepMegjelenit.getImage();
+        image2 = image = kepMegjelenit.getImage();
         imageView.setImage(image);
     }
 
@@ -59,6 +61,7 @@ public class Controller implements Initializable {
         ChangeListener<String> kepMegjelenitListener = (observable, oldValue, newValue) ->{
 
             image = kepMegjelenit.getImage();
+
             imageView.setImage(image);
 
             System.out.println("--listener--");
@@ -84,6 +87,7 @@ public class Controller implements Initializable {
     public void openImage() throws FileNotFoundException {
         if(fk.getFileImage()!=null){
             image = new Image(new FileInputStream(fk.getFileImage()));
+            image2 = image;
             kepMegjelenit.setImage(image);
         }
 

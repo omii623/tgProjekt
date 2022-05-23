@@ -19,6 +19,7 @@ import java.io.IOException;
 
 import javafx.embed.swing.SwingFXUtils;
 
+import static hu.projekt.photo.Controller.image2;
 
 
 public class FileKezel {
@@ -76,6 +77,7 @@ public class FileKezel {
         BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
         try {
             ImageIO.write(bufferedImage, "png", fileToSave);
+
         } catch (IOException e) {
         }
 
