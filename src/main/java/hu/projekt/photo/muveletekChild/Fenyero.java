@@ -41,7 +41,7 @@ public class Fenyero extends Muveletek{
         buttonList.add(button);
         buttonList.add(button2);
 
-        setText("FENYERO");
+        setText( "FENYERO" );
 
     }
 
