@@ -12,6 +12,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
+import static hu.projekt.photo.Controller.image3;
 import static hu.projekt.photo.MainPhoTo.font;
 
 public class Filter extends Muveletek{
@@ -49,6 +50,7 @@ public class Filter extends Muveletek{
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>jobb<==");
                 kepMegjelenit.setImage(monoImage(monoImage(image, "mono"), "mono"));
 
@@ -57,6 +59,7 @@ public class Filter extends Muveletek{
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>jobb<==");
             kepMegjelenit.setImage(monoImage(monoImage(image, "palett"), "palett"));
         };

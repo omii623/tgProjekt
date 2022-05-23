@@ -12,6 +12,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
+import static hu.projekt.photo.Controller.image3;
 import static hu.projekt.photo.MainPhoTo.font;
 
 public class Forgat extends Muveletek{
@@ -19,8 +20,8 @@ public class Forgat extends Muveletek{
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("BAL");
-        Button button2 = new Button("JOBB");
+        Button button = new Button("LEFT");
+        Button button2 = new Button("RIGHT");
 
         button.setFont(font);
         button.setStyle(" -fx-background-color: transparent;" + " -fx-text-fill: white; " + " -fx-border-color: white;" + "-fx-border-width: 1px;" + "-fx-border-radius: 4px;");
@@ -41,13 +42,14 @@ public class Forgat extends Muveletek{
         buttonList.add(button);
         buttonList.add(button2);
 
-        setText("FORGAT");
+        setText("ROTATE");
     }
 
     @Override
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>jobb<==");
             kepMegjelenit.setImage(rotateImage(image, "bal"));
         };
@@ -55,6 +57,7 @@ public class Forgat extends Muveletek{
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>bal<==");
             kepMegjelenit.setImage(rotateImage(image, "jobb"));
         };

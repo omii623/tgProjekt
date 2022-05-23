@@ -11,6 +11,7 @@ import javafx.scene.image.PixelReader;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 
+import static hu.projekt.photo.Controller.image3;
 import static hu.projekt.photo.MainPhoTo.font;
 import static hu.projekt.photo.muveletekChild.Forgat.rotateImage;
 
@@ -19,8 +20,8 @@ public class Tukroz extends Muveletek {
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("VIZ");
-        Button button2 = new Button("FÜGG");
+        Button button = new Button("HOR");
+        Button button2 = new Button("VER");
 
         button.setFont(font);
         button.setStyle(" -fx-background-color: transparent;" + " -fx-text-fill: white; " + " -fx-border-color: white;" + "-fx-border-width: 1px;" + "-fx-border-radius: 4px;");
@@ -41,13 +42,14 @@ public class Tukroz extends Muveletek {
         buttonList.add(button);
         buttonList.add(button2);
 
-        setText("TÜKRÖZ");
+        setText("MIRROR");
     }
 
     @Override
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>vízszintes<==");
             kepMegjelenit.setImage(mirrorImage(image, "vizTuk"));
         };
@@ -55,6 +57,7 @@ public class Tukroz extends Muveletek {
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>függőleges<==");
             kepMegjelenit.setImage(mirrorImage(image, "fugTuk"));
         };

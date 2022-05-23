@@ -23,6 +23,7 @@ public class Controller implements Initializable {
 
     public static Image image;
     public static Image image2;
+    public static Image image3;
     FileKezel fk = new FileKezel();
     @FXML
     ImageView imageView;

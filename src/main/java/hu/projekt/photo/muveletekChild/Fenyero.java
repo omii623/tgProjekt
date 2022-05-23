@@ -12,6 +12,7 @@ import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 
+import static hu.projekt.photo.Controller.image3;
 import static hu.projekt.photo.MainPhoTo.font;
 
 public class Fenyero extends Muveletek{
@@ -19,8 +20,8 @@ public class Fenyero extends Muveletek{
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("PLUSZ");
-        Button button2 = new Button("MINUSZ");
+        Button button = new Button("PLUS");
+        Button button2 = new Button("MINUS");
 
         button.setFont(font);
         button.setStyle(" -fx-background-color: transparent;" + " -fx-text-fill: white; " + " -fx-border-color: white;" + "-fx-border-width: 1px;" + "-fx-border-radius: 4px;");
@@ -41,7 +42,7 @@ public class Fenyero extends Muveletek{
         buttonList.add(button);
         buttonList.add(button2);
 
-        setText( "FÉNYERÖ" );
+        setText( "BRIGHTNESS" );
 
     }
 
@@ -49,22 +50,24 @@ public class Fenyero extends Muveletek{
     public void buttonEvents() {
         EventHandler<ActionEvent> event = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>jobb<==");
-            kepMegjelenit.setImage(monoImage(monoImage(image, "plus"), "plus"));
+            kepMegjelenit.setImage(fenyeroImage(fenyeroImage(image, "plus"), "plus"));
 
         };
         buttonList.get(0).setOnAction(event);
 
         EventHandler<ActionEvent> event2 = e -> {
             Image image = kepMegjelenit.getImage();
+            image3 = image;
             //System.out.println("==>jobb<==");
-            kepMegjelenit.setImage(monoImage(monoImage(image, "minus"), "minus"));
+            kepMegjelenit.setImage(fenyeroImage(fenyeroImage(image, "minus"), "minus"));
         };
         buttonList.get(1).setOnAction(event2);
 
     }
 
-    public static Image monoImage(Image image,String s) {
+    public static Image fenyeroImage(Image image,String s) {
         int height = (int) Math.floor(image.getHeight());
         int width = (int) Math.floor(image.getWidth());
 
