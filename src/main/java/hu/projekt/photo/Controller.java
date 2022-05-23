@@ -92,6 +92,8 @@ public class Controller implements Initializable {
         if(fk.getFileImage()!=null){
             image = new Image(new FileInputStream(fk.getFileImage()));
             image2 = image;
+            kepek.clear();
+            kepek.add(image);
             kepMegjelenit.setImage(image);
         }
 
