@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+
+
 import static hu.projekt.photo.Controller.image;
 
 
@@ -50,6 +52,7 @@ public class FileKezel {
         System.out.println("Saved to path: "+fileImage);
 
     }
+
 
     public static void fileSavePure() throws IOException {
 

@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 
@@ -18,6 +19,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import static javafx.scene.text.Font.loadFont;
+
 public class MainPhoTo extends Application {
 
     public static Scene scene;
@@ -25,6 +28,7 @@ public class MainPhoTo extends Application {
     BorderPane root;
     KepMegjelenit kepMegjelenit = KepMegjelenit.getInstance();
     List<VBox> vboxList = new ArrayList<>();//gombok listája ami dinamikusan fog megjeleni
+    public static Font font = loadFont("file:font/FuturaLight.ttf", 22);
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -61,8 +65,8 @@ public class MainPhoTo extends Application {
                 rightSpacer,
                 Priority.SOMETIMES
         );
-        toolBar.setPadding(new Insets(10, 20,10,20));
-        toolBar.setStyle("-fx-border-color: lightblue");
+        toolBar.setPadding(new Insets(20, 30,20,30));
+        toolBar.setStyle("-fx-background-color: #005580;");
 
 
         toolBar.getItems().add(leftSpacer);//kötépre igazít
@@ -73,6 +77,8 @@ public class MainPhoTo extends Application {
         toolBar.getItems().add(rightSpacer);//kötépre igazít
 
         root.setBottom(toolBar);
+
+
     }
 
     public static void main(String[] args) {
@@ -140,7 +146,7 @@ public class MainPhoTo extends Application {
                     "<?import javafx.scene.control.*?>\n" +
                     "<?import javafx.scene.layout.*?>\n" +
                     "\n" +
-                    "<VBox fx:id=\"vbox\" alignment=\"TOP_CENTER\" maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"64.0\" prefWidth=\"136.0\" xmlns=\"http://javafx.com/javafx/16\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"hu.projekt.photo.muveletekChild."+name+"\">\n" +
+                    "<VBox fx:id=\"vbox\" alignment=\"TOP_CENTER\" maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"80.0\" prefWidth=\"200.0\" xmlns=\"http://javafx.com/javafx/16\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"hu.projekt.photo.muveletekChild."+name+"\">\n" +
                     "    <children>\n" +
                     "        <Label fx:id=\"label\" alignment=\"TOP_CENTER\" text=\"Label\" /><HBox fx:id=\"hbox\" alignment=\"CENTER\" prefHeight=\"53.0\" prefWidth=\"136.0\" />\n" +
                     "    </children>\n" +

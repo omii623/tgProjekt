@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static hu.projekt.photo.MainPhoTo.font;
+
 public abstract class Muveletek implements Initializable {
     @FXML
     protected HBox hbox;
@@ -39,11 +41,13 @@ public abstract class Muveletek implements Initializable {
         buttonSetup();
         buttonEvents();
         label.setText(text);
+        label.setStyle(" -fx-text-fill: white; ");
+        label.setFont(font);
 
-        vbox.setStyle(" -fx-border-color: #2e8b57;" +
-                " -fx-background-color: #A0BBA2;" +
+        vbox.setStyle(" -fx-border-color: white;" +
+                " -fx-background-color: #005580;" +
                 "    -fx-border-width: 2px;" +
-                "    -fx-spacing: 8;");
+                "    -fx-spacing: 0px;" + " -fx-border-radius: 8px;" + "-fx-background-radius: 9px;");
 
         hbox.setSpacing(10);
         hbox.setMaxWidth(1000);
@@ -54,6 +58,8 @@ public abstract class Muveletek implements Initializable {
 
         for (Button button:buttonList) {
             hbox.getChildren().add(button);
+
+
         }
     }
 
