@@ -21,8 +21,8 @@ public class Tukroz extends Muveletek {
 
     @Override
     public void buttonSetup() {
-        Button button = new Button("HOR");
-        Button button2 = new Button("VER");
+        Button button = new Button("VER");
+        Button button2 = new Button("HOR");
 
         button.setFont(font);
         button.setStyle(" -fx-background-color: transparent;" + " -fx-text-fill: white; " + " -fx-border-color: white;" + "-fx-border-width: 1px;" + "-fx-border-radius: 4px;");

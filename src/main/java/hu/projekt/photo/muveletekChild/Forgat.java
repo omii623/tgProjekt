@@ -53,7 +53,7 @@ public class Forgat extends Muveletek{
             image3 = image;
             kepek.add(image);
             //System.out.println("==>jobb<==");
-            kepMegjelenit.setImage(rotateImage(image, "bal"));
+            kepMegjelenit.setImage(rotateImage(image, "jobb"));
         };
         buttonList.get(0).setOnAction(event);
 
@@ -62,7 +62,7 @@ public class Forgat extends Muveletek{
             image3 = image;
             kepek.add(image);
             //System.out.println("==>bal<==");
-            kepMegjelenit.setImage(rotateImage(image, "jobb"));
+            kepMegjelenit.setImage(rotateImage(image, "bal"));
         };
         buttonList.get(1).setOnAction(event2);
     }
